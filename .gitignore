@@ -1,0 +1,12 @@
+# uv ortamı: her bilgisayarda "uv sync" ile kurulur, repoya girmez
+.venv/
+__pycache__/
+.ipynb_checkpoints/
+
+# İşletim sistemi ve editör dosyaları
+.DS_Store
+.idea/
+
+# Veri: öğrenci kendisi indirir, repoya girmez (yalnızca talimat dosyası girer)
+Veri/*
+!Veri/BENIOKU.md

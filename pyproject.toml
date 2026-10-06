@@ -1,0 +1,27 @@
+[project]
+name = "ceng468"
+version = "2026.1"
+description = "CENG468 Veri Madenciligi - ders ortami"
+requires-python = ">=3.13,<3.14"
+dependencies = [
+    # Jupyter / VS Code notebook destegi
+    "ipykernel",
+    "ipywidgets",
+    # Temel veri bilimi
+    "numpy",
+    "pandas>=3.0",
+    "scipy",
+    "openpyxl",
+    # Gorsellestirme
+    "matplotlib",
+    "seaborn",
+    "missingno",
+    # Klasik makine ogrenmesi
+    "scikit-learn",
+    "statsmodels",
+    "xgboost",
+    "lightgbm",
+    # Birliktelik kurallari ve tavsiye sistemleri
+    "mlxtend",
+    "scikit-surprise",
+]
