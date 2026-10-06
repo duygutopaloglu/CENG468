@@ -5,6 +5,8 @@ Pamukkale Üniversitesi · Mühendislik Fakültesi · 2026-2027 Güz
 
 Bu repoda dersin **kodları** (`Kodlar/`), **sunumları** (`Sunumlar/`) ve çalışma ortamının tarifi bulunur. Aşağıdaki kurulumu **bir kez** yaparsınız; sonra her hafta yalnızca güncellemeleri alırsınız.
 
+> 📘 **Ekran görüntülü ayrıntılı anlatım, kavramlar (neden ortam, uv ve venv farkı) ve kendi projeni kurma alıştırması:** [docs/REHBER.md](docs/REHBER.md)
+
 > Windows ve Mac için komutlar aynıdır. Farklı olduğu yerde ikisi de yazılıdır. Komutları **VS Code'un terminaline** yazın (Windows'ta bu PowerShell'dir).
 
 ---
