@@ -7,6 +7,8 @@ __pycache__/
 .DS_Store
 .idea/
 
-# Veri: öğrenci kendisi indirir, repoya girmez (yalnızca talimat dosyası girer)
-Veri/*
-!Veri/BENIOKU.md
+# Veri: her veri seti kendi alt klasöründe (Veri/online_retail/, Veri/movielens/ ...).
+# Klasörler ve BENIOKU.md talimatları repoya girer; veri dosyaları girmez.
+Veri/**
+!Veri/**/
+!Veri/**/BENIOKU.md
