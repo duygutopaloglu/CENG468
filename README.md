@@ -31,6 +31,12 @@ uv, dersin Python ortamını kuran araçtır. Anaconda veya ayrı bir Python kur
 
 Bitince **terminali kapatıp yeniden açın** ve kontrol edin: `uv --version` → `uv 0.x.x` gibi bir sürüm görmelisiniz.
 
+> ⚠️ **Windows:** Kurulum bitince yalnızca terminali değil, **VS Code'u ve açık tüm PowerShell pencerelerini tamamen kapatıp** yeniden açın. Aksi halde `uv` tanınmaz (*"uv : The term 'uv' is not recognized…"*).
+> Kapatıp açmadan hemen devam etmek isterseniz, o terminalde bir kez şunu çalıştırın (yalnızca o pencere için geçerlidir):
+> ```powershell
+> $env:Path = "$env:USERPROFILE\.local\bin;$env:Path"
+> ```
+
 ### 3. Git'i kontrol edin
 ```
 git --version
@@ -43,6 +49,13 @@ cd ~
 git clone https://github.com/duygutopaloglu/CENG468.git ceng468
 ```
 Klasör kullanıcı klasörünüzde oluşur: Windows `C:\Users\<adınız>\ceng468`, Mac `/Users/<adınız>/ceng468`.
+
+> **Git kurulamıyorsa (örn. laboratuvar bilgisayarı): ZIP ile indirin.**
+> 1. <https://github.com/duygutopaloglu/CENG468> sayfasında yeşil **Code** düğmesi → **Download ZIP**.
+> 2. ZIP'i açın. İçinden çıkan `CENG468-main` klasörünün adını **`ceng468`** yapın ve kullanıcı klasörünüze taşıyın (Windows `C:\Users\<adınız>\ceng468`).
+> 3. 5. adımdan devam edin.
+>
+> Bu yolla `git pull` çalışmaz: her hafta yeni dosyaları aynı sayfadan tekrar indirmeniz gerekir. Kendi bilgisayarınızda Git'i kurup `git clone` ile çalışmanız önerilir.
 
 > ⚠️ **Masaüstü, Belgeler, OneDrive, iCloud veya Google Drive kullanmayın.** Bu klasörler senkronize edilir ve senkronizasyon ortam klasörünü (`.venv`) bozar.
 
@@ -106,7 +119,7 @@ uv sync
 
 | Sorun | Çözüm |
 |---|---|
-| `uv` / `git` tanınmıyor | Terminali (gerekirse VS Code'u) kapatıp açın. |
+| `uv` / `git` tanınmıyor | VS Code'u ve tüm terminalleri **tamamen** kapatıp açın. Windows'ta hemen devam etmek için: `$env:Path = "$env:USERPROFILE\.local\bin;$env:Path"` |
 | Windows'ta *running scripts is disabled* | PowerShell'de bir kez: `Set-ExecutionPolicy -Scope CurrentUser RemoteSigned` |
 | Kernel listesinde `.venv` yok | `Ctrl+Shift+P` (Mac `Cmd+Shift+P`) → **Developer: Reload Window**, sonra tekrar **Select Kernel**. |
 | `ModuleNotFoundError` | Kernel `.venv` mi? Öyleyse terminalde `uv sync`, notebook'ta **Restart**. |
