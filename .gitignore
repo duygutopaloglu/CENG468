@@ -15,3 +15,6 @@ Veri/**
 
 # Hocanın ders içi kopyaları: repoya girmez
 _hoca/
+
+# Öğrencilerin veri setleri (proje): yerel kalır, repoya girmez
+ogrenci_data/
