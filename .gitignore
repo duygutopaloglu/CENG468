@@ -18,3 +18,6 @@ _hoca/
 
 # Öğrencilerin veri setleri (proje): yerel kalır, repoya girmez
 ogrenci_data/
+
+# Betiklerin ürettiği rapor ve csv dosyaları: her çalıştırmada yeniden oluşur
+Ciktilar/
