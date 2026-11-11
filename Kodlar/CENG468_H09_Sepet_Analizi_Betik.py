@@ -14,12 +14,12 @@ nasıl kurulduğunu ve çıktısının nasıl okunduğunu görmek.
   (b) Hücre hücre: VS Code'da dosyayı açın, her "# %%" satırı bir hücredir;
       Shift+Enter ile sırayla çalıştırın (Jupyter uzantısı, "Interactive Window").
       Bu modda komut satırı argümanı yoktur: [0] AYARLAR hücresinde
-      VERI_SETI ve ALT_KUME değişkenleri varsayılanla başlar, istediğinizi elle yazın.
+      VERI_SETI ve ALT_KUME değişkenleri varsayılanla (MovieLens) başlar, istediğinizi elle yazın.
       Aynı dosya, iki görünüm: ara değişkenleri incelemek için (b), sonucu almak için (a).
 
 Çalıştırma (repo kökünde, uv ortamı etkinken):
-    uv run python Kodlar/CENG468_H09_Sepet_Analizi_Betik.py                 # Online Retail II
-    uv run python Kodlar/CENG468_H09_Sepet_Analizi_Betik.py movielens       # MovieLens
+    uv run python Kodlar/CENG468_H09_Sepet_Analizi_Betik.py                 # MovieLens (varsayılan)
+    uv run python Kodlar/CENG468_H09_Sepet_Analizi_Betik.py online_retail   # Online Retail II (Almanya)
     uv run python Kodlar/CENG468_H09_Sepet_Analizi_Betik.py online_retail all   # bütün ülkeler
 
 Aynı algoritma iki farklı veriye uygulanır. Kod değişmez, sepetin tanımı değişir:
@@ -50,12 +50,12 @@ pd.set_option("display.max_colwidth", 45)
 
 # %% [0] AYARLAR
 # ----------------------------------------------------------------------------
-# Komut satırından veri seti adı gelmezse Online Retail II kullanılır.
+# Komut satırından veri seti adı gelmezse MovieLens kullanılır.
 # Terminalde: argümanlar okunur. VS Code Interactive Window / Jupyter çekirdeğinde
 # sys.argv = ['ipykernel_launcher.py', '-f', '<bağlantı>.json'] olduğundan okunmaz;
-# orada aşağıdaki iki değişkeni elle değiştirin (ör. VERI_SETI = "movielens").
+# orada aşağıdaki iki değişkeni elle değiştirin (ör. VERI_SETI = "online_retail").
 _ARGS = [] if "ipykernel" in sys.modules else sys.argv[1:]
-VERI_SETI = _ARGS[0] if len(_ARGS) > 0 else "online_retail"
+VERI_SETI = _ARGS[0] if len(_ARGS) > 0 else "movielens"
 ALT_KUME = _ARGS[1] if len(_ARGS) > 1 else None   # ör. "Germany", "all"
 
 AYARLAR = {
